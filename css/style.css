@@ -1,1 +1,46 @@
-/* YeyeYeee código aquí */
+body{
+    background-color: rgba(205, 200, 200, 0.954);
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding : 35px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+/* .pd-sections{
+    padding: 3% 0;
+} */
+
+.tc-white{
+    color: white;
+  
+}
+
+.container{
+    color: #F5AC36;
+    background-position: center center;
+    padding : 90px;
+    width : 340px;
+}
+
+#navbarToggleExternalContent{
+    position : absolute;
+}
+
+/* .fa-dollar-sign{
+    color: #F5AC36;
+    font-size: 10em;
+} */
+
+#navbarToggleExternalContentTwo{
+    background-color: #F5AC36;
+    background-position: center center;
+    width : 340px;
+}
+
+.bg-yellow{
+    background-color: #F5AC36;
+}

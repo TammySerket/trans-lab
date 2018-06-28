@@ -1,1 +1,149 @@
-<!-- Wowowoyipiyouuu tu código acá -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRANS-LAB</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Fuente-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Encabezado -->
+                    <div class="pos-f-t"></div>
+                    
+                    <nav class="navbar navbar-dark bg-dark tc-white">
+                            
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <h1>TRANS-LAB</h1>
+                    </nav>
+<!-- Despliegue -->
+                    <div class="collapse" id="navbarToggleExternalContent">
+                     <div class="bg-white p-4">
+                              <div>
+                                    <!-- <i class="fa-dollar-sign"></i> -->
+                                    <button type="button" class="btn bg-white" onclick="saldo()" >Ver Saldo</button>
+                              </div>
+                              <div><button type="button" class="btn bg-white" onclick="tarifa()">Calcular Tarifa</button></div>
+                              <div><button type="button" class="btn bg-white" onclick="perfil()">Perfil</button></div>
+                              <div><button type="button" class="btn bg-white" onclick="preguntas()">Preguntas Frecuentes</button></div>
+                              <div><button type="button" class="btn bg-white" onclick="home()">Home</button></div>
+                              
+                     </div>
+                    </div>
+<!-- Botones -->
+<div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                    <div id="List">
+                      <div class="btn-group-vertical">
+                                    <button onclick="numberBip()" type="button" class="btn btn-warning tc-white">VER SALDO</button> 
+                                    <input type="text">
+                                    <button type="button" class="btn btn-warning tc-white">CALCULAR TARIFA</button>
+                                    <button type="button" class="btn btn-warning tc-white">PERFIL</button>
+                                    <button type="button" class="btn btn-warning tc-white">PREGUNTAS FRECUENTES</button>
+                            
+                      </div>
+                    </div>
+            </div>
+        </div>
+</div>  
+<div class="pos-f-t-TWO"></div>
+                    
+<nav class="navbar navbar-yellow bg-yellow tc-white">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentTwo" aria-controls="navbarToggleExternalContentTwo" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1>PREGUNTAS FRECUENTES</h1>
+</nav>
+   
+<!-- Preguntas frecuentes -->
+<div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    ¿Dónde puedo cambiar mi tarjeta bip! portador en caso de falla?
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                    Si tu tarjeta no funciona y tiene daños no atribuibles al usuario, llévala a una Oficina de Servicio al Cliente donde será cambiada por una nueva, sólo si se comprueba la falla. Si la tarjeta dañada tiene saldo, será traspasado en cinco días hábiles.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-light" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ¿Cómo puedo saber el saldo de mi tarjeta sin pagar un viaje?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                    Hay dos formas en caso de no utilizar esta aplicación: ingresando tu tarjeta en un Infobip! o solicitando de forma impresa la información en un Centro bip!
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-light" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ¿Se puede usar la tarjeta bip! en la Región Metropolitana Rural?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                    No. La Tarjeta bip! sólo puedes usarla en buses de Transantiago y Metro de Santiago.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Si me equivoco de bus y paso la tarjeta, ¿me devuelven la carga?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+                        No, el pasaje se cobra automáticamente sin devolución.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h5 class="mb-0">
+                        <button class="btn btn-light" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseFour">
+                                ¿Qué cuidados requiere la tarjeta para mantenerla en buenas condiciones?
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                      <div class="card-body">
+                            Los cuidados de tu tarjeta son simples. Sólo debes evitar exponerla al calor, doblarla o quebrarla. Te recomendamos tenerla en un tarjetero plástico para aumentar su vida útil.
+                      </div>
+                    </div>
+                  </div>
+      </div>
+     
+<!--Jquery Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--Bootstrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+    <script src="js/main.js"></script>
+</body>
+</html>
