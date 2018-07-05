@@ -20,26 +20,28 @@ let input = document.querySelector('input');
     })               
         
      /*const numberBip = getBip.toString(input);
-     console.log((numberBip).value);*/
-     
-     
+     console.log((numberBip).value);*/    
 
-/*const formulario = document.getElementById("formulario")
+function saveData() {
+    if((document.getElementById("login-username").value === "") || (document.getElementById("login-password").value === "")){
+        alert("no puedes dejar campos vacios")    
+        }else{
+            let user = document.getElementById("login-username").value;
+            let password = document.getElementById("login-password").value;
+            localStorage.setItem(user,password);
+        }
 
-formulario.addEventListener("submit", function(e){
-    e.preventDefault();
-    let datos = new FormData(formulario)
-
-})
-let usuario = []
-let pass = []
-if(usuario === " " || pass === " "){
-    usuario ="Llena los campos solicitados";
-    pass = "Llena los campos solicitados";
-}else {
-    usuario = "";
-    pass = "";
-} */
-
+    document.getElementById("loginbox").innerHTML = "";
+    for(let i=0; i < localStorage.length; i++) {
+        let userName = localStorage.key(i);
+        let userPassword = localStorage.getItem(userName);
+    }
+    if(typeof(Storage) !== "undefined"){
+        document.getElementById("login-username").value = "";
+        document.getElementById("login-password").value = "";
+    }else{
+        alert("lo sentimos, el web Storage no tiene soporte");
+    }
+}
 
 
