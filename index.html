@@ -1,262 +1,264 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TRANS-LAB</title>
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--Fuente-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+
+
 <body>
-  <!-- Encabezado -->
-                    <div class="col-sm-12 pos-f-t" style="width: 100%; display: block;" ></div>
-                    
-                    <nav class="navbar navbar-dark bg-dark tc-white" style="width: 100%; display: block;">
-                            
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                            </button>
+    <!-- Encabezado -->
+    <div class="col-sm-12 pos-f-t" style="width: 100%; display: block;"></div>
 
-                            <h1>TRANS-LAB</h1>
-                    </nav>
+    <nav class="navbar navbar-dark bg-dark tc-white" style="width: 100%; display: block;">
 
-<!-- LOGIN -->                    
-                    <div class="container col-sm-12 collapse" style="width: 100%; display: block;">    
-                      <div id="loginbox"class="mainbox col-sm-12 text-center">                    
-                          <div class="panel panel-info" >
-                              <div class="panel-heading">
-                                  <div class="panel-title">
-                                      <img src="docs/imagen.png" alt="" style="max-width: 150px;">
-                                  </div>
-                                  <div class="tittle">
-                                      <h1><b>TRANS-LAB</b></h1>
-                                  </div>
-                              </div>     
-                              <div class="panel-body" >
-                                  <div id="login-alert" class="alert alert-danger col-sm-12"></div>                                    
-                                  <form id="loginform" class="form-horizontal" role="form">                                       
-                                      <div style="margin-bottom: 25px" class="input-group">
-                                          <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="&#xF007; &nbsp; Correo electrónico" style="font-family:Arial, FontAwesome">                                        
-                                      </div>                                      
-                                      <div class="input-group">
-                                          <input id="login-password" type="password" class="form-control" name="password" placeholder="&#xF023; &nbsp; Contraseña" style="font-family:Arial, FontAwesome">
-                                      </div>                                                                                            
-                                      <div class="col-sm-12 controls">
-                                          <a style = "width: 100%" onclick="saveData()" id="btn-login" href="#" class="btn btn-success btn-yel">Login</a>
-                                      </div> 
-                                  </form>   
-                                  <div class="col-sm-12 control" style="background-color: transparent">
-                                          <div class="donthave">                       
-                                              <a style="color: white" href="#">¿Olvidaste tu contraseña?</a>
-                                              <br>
-                                              <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign Up Here</a>
-                                          </div>
-                                      </div>                  
-                              </div>                     
-                          </div>  
-                      </div>
-                      <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                          <div class="panel panel-info">
-                              <div class="panel-heading">
-                                  <div class="panel-title">Sign Up</div>
-                                  <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
-                              </div>  
-                              <div class="panel-body" >
-                                  <form id="signupform" class="form-horizontal" role="form">
-                                      <div id="signupalert" style="display:none" class="alert alert-danger">
-                                          <p>Error:</p>
-                                          <span></span>
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="email" class="col-sm-12 control-label">Email</label>
-                                          <div class="col-sm-12">
-                                              <input type="text" class="form-control" name="email" placeholder="Email Address">
-                                          </div>
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="firstname" class="ccol-sm-12 control-label">First Name</label>
-                                          <div class="col-sm-12">
-                                              <input type="text" class="form-control" name="firstname" placeholder="First Name">
-                                          </div>
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="lastname" class="col-sm-12 control-label">Last Name</label>
-                                          <div class="col-sm-12">
-                                              <input type="text" class="form-control" name="lastname" placeholder="Last Name">
-                                          </div>
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="password" class="col-sm-12 control-label">Password</label>
-                                          <div class="col-sm-12">
-                                              <input type="password" class="form-control" name="passwd" placeholder="Password">
-                                          </div>
-                                      </div>                                           
-                                      <div class="form-group">
-                                          <label for="icode" class="col-sm-12 control-label">Invitation Code</label>
-                                          <div class="col-sm-12">
-                                              <input type="text" class="form-control" name="icode" placeholder="">
-                                          </div>
-                                      </div>       
-                                      <div class="form-group">
-                                          <!-- Button -->                                        
-                                          <div class="col-md-offset-3 col-sm-12">
-                                              <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                                              <span style="margin-left:8px;">or</span>  
-                                          </div>
-                                      </div>                                        
-                                          <div style="border-top: 1px solid #ffffff; padding-top:20px"  class="form-group">
-                                              <div class="col-md-offset-3 col-sm-12">
-                                                  <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
-                                              </div>                                           
-                                          </div>       
-                                  </form>
-                              </div>
-                          </div>
-                      </div> 
-                  </div>
-<!-- Despliegue -->
-                    <div class="col-sm-12 collapse" id="navbarToggleExternalContent">
-                     <div class="bg-white p-4">
-                              <div>
-                                    <!-- <i class="fa-dollar-sign"></i> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                                    <button type="button" class="btn bg-white" onclick="saldo()" >Ver Saldo</button>
-                              </div>
+        <h1>TRANS-LAB</h1>
+    </nav>
 
-                              <div><button type="button" class="btn bg-white" onclick="tarifa()">Calcular Tarifa</button></div>
-
-                              <div><button type="button" class="btn bg-white" onclick="perfil()">Perfil</button></div>
-
-                              <div><button type="button" class="btn bg-white" onclick="preguntas()">Preguntas Frecuentes</button></div>
-
-                              <div><button type="button" class="btn bg-white" onclick="home()">Home</button></div>
-                              
-                     </div>
+    <!-- LOGIN -->
+    <div class="container col-sm-6 collapse" style="width: 100%; display: block;">
+        <div id="loginbox" class="mainbox col-sm-6 text-center">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <img src="docs/imagen.png" alt="" style="max-width: 150px;">
                     </div>
-
-<!-- Botones -->
-<div class="container" style="width: 100%; display: block;">
-        <div class="row">
-            <div class="col-sm-12">
-                    <div id="List">
-                      <div class="btn-group-vertical">
-
-                                    <button type="button" class="btn btn-warning tc-white">VER SALDO</button> 
-                                    <button type="button" class="btn btn-warning tc-white">CALCULAR TARIFA</button>
-                                    <button type="button" class="btn btn-warning tc-white">PERFIL</button>
-                                    <button type="button" class="btn btn-warning tc-white">PREGUNTAS FRECUENTES</button>
-                            
-                      </div>
+                    <div class="tittle">
+                        <h1>
+                            <b>TRANS-LAB</b>
+                        </h1>
                     </div>
+                </div>
+                <div class="panel-body">
+                    <div id="login-alert" class="alert alert-danger col-sm-6"></div>
+                    <form id="loginform" class="form-horizontal" role="form">
+                        <div style="margin-bottom: 25px" class="input-group col-sm-6 controls">
+                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="&#xF007; &nbsp; Correo electrónico"
+                                style="font-family:Arial, FontAwesome">
+                        </div>
+                        <div class="input-group col-sm-6 controls">
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="&#xF023; &nbsp; Contraseña"
+                                style="font-family:Arial, FontAwesome">
+                        </div>
+                        <div class="col-sm-6 controls">
+                            <a style="width: 100%" onclick="saveData()" id="btn-login" href="#" class="btn btn-success btn-yel">Login</a>
+                        </div>
+                    </form>
+                    <div class="col-sm-6 control" style="background-color: transparent">
+                        <div class="donthave">
+                            <a style="color: white" href="#">¿Olvidaste tu contraseña?</a>
+                            <br>
+                            <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign Up Here</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-</div>  
+        <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Sign Up</div>
+                    <div style="float:right; font-size: 85%; position: relative; top:-10px">
+                        <a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form id="signupform" class="form-horizontal" role="form">
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p>Error:</p>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-8 control-label">Email</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="email" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname" class="ccol-sm-8 control-label">First Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-12 control-label">Last Name</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-12 control-label">Password</label>
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control" name="passwd" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="icode" class="col-sm-12 control-label">Invitation Code</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" name="icode" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-md-offset-3 col-sm-12">
+                                <button id="btn-signup" type="button" class="btn btn-info">
+                                    <i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                <span style="margin-left:8px;">or</span>
+                            </div>
+                        </div>
+                        <div style="border-top: 1px solid #ffffff; padding-top:20px" class="form-group">
+                            <div class="col-md-offset-3 col-sm-12">
+                                <button id="btn-fbsignup" type="button" class="btn btn-primary">
+                                    <i class="icon-facebook"></i>   Sign Up with Facebook</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Despliegue -->
+    <div class="container">
+        <div class="col-sm-12 collapse" id="navbarToggleExternalContent">
+            <div class="bg-white p-4">
+                <div>
+                    <button type="button" class="btn bg-white" onclick="saldo()">Ver Saldo</button>
+                </div>
+
+                <div>
+                    <button type="button" class="btn bg-white" onclick="tarifa()">Calcular Tarifa</button>
+                </div>
+
+                <div>
+                    <button type="button" class="btn bg-white" onclick="perfil()">Perfil</button>
+                </div>
+
+                <div>
+                    <button type="button" class="btn bg-white" onclick="preguntas()">Preguntas Frecuentes</button>
+                </div>
+
+                <div>
+                    <button type="button" class="btn bg-white" onclick="home()">Home</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="container" style="width: 100%; display: block;">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="List">
+                    <div class="btn-group-vertical">
+
+                        <button type="button" class="btn btn-warning tc-white">VER SALDO</button>
+                        <button type="button" class="btn btn-warning tc-white">CALCULAR TARIFA</button>
+                        <button type="button" class="btn btn-warning tc-white">PERFIL</button>
+                        <button type="button" class="btn btn-warning tc-white">PREGUNTAS FRECUENTES</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-<div class="col-sm-12 pos-f-t-TWO"></div>
-                    
-<nav class="col-sm-12 navbar navbar-yellow bg-yellow tc-white">
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentTwo" aria-controls="navbarToggleExternalContentTwo" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <div class="col-sm-12 pos-f-t-TWO"></div>
+
+    <nav class="col-sm-12 navbar navbar-yellow bg-yellow tc-white">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentTwo" aria-controls="navbarToggleExternalContentTwo"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <h1>PREGUNTAS FRECUENTES</h1>
-</nav>
-   
+    </nav>
 
 
 
 
 
-<!-- Preguntas frecuentes -->
-<div id="accordion" style="width: 100%; display: block;">
+
+    <!-- Preguntas frecuentes -->
+    <div id="accordion" style="width: 100%; display: block;">
         <div class="col-sm-12 card">
-          <div class="col-sm-12 card-header" id="headingOne" style="width: 100%; display: block;">
-            <h5 class="mb-0">
-              <button class="btn btn-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    ¿Dónde puedo cambiar mi tarjeta bip! portador en caso de falla?
-              </button>
-            </h5>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-                    Si tu tarjeta no funciona y tiene daños no atribuibles al usuario, llévala a una Oficina de Servicio al Cliente donde será cambiada por una nueva, sólo si se comprueba la falla. Si la tarjeta dañada tiene saldo, será traspasado en cinco días hábiles.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-light" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    ¿Cómo puedo saber el saldo de mi tarjeta sin pagar un viaje?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-                    Hay dos formas en caso de no utilizar esta aplicación: ingresando tu tarjeta en un Infobip! o solicitando de forma impresa la información en un Centro bip!
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              <button class="btn btn-light" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    ¿Se puede usar la tarjeta bip! en la Región Metropolitana Rural?
-              </button>
-            </h5>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-                    No. La Tarjeta bip! sólo puedes usarla en buses de Transantiago y Metro de Santiago.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-                <div class="card-header" id="headingFour">
-                  <h5 class="mb-0">
-                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Si me equivoco de bus y paso la tarjeta, ¿me devuelven la carga?
+            <div class="col-sm-12 card-header" id="headingOne" style="width: 100%; display: block;">
+                <h5 class="mb-0">
+                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        ¿Dónde puedo cambiar mi tarjeta bip! portador en caso de falla?
                     </button>
-                  </h5>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Si tu tarjeta no funciona y tiene daños no atribuibles al usuario, llévala a una Oficina de Servicio al Cliente donde será
+                    cambiada por una nueva, sólo si se comprueba la falla. Si la tarjeta dañada tiene saldo, será traspasado
+                    en cinco días hábiles.
                 </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                  <div class="card-body">
-                        No, el pasaje se cobra automáticamente sin devolución.
-                  </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Cómo puedo saber el saldo de mi tarjeta sin pagar un viaje?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Hay dos formas en caso de no utilizar esta aplicación: ingresando tu tarjeta en un Infobip! o solicitando de forma impresa
+                    la información en un Centro bip!
                 </div>
-              </div>
-              <div class="card">
-                    <div class="card-header" id="headingFive">
-                      <h5 class="mb-0">
-                        <button class="btn btn-light" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseFour">
-                                ¿Qué cuidados requiere la tarjeta para mantenerla en buenas condiciones?
-                        </button>
-                      </h5>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                      <div class="card-body">
-                            Los cuidados de tu tarjeta son simples. Sólo debes evitar exponerla al calor, doblarla o quebrarla. Te recomendamos tenerla en un tarjetero plástico para aumentar su vida útil.
-                      </div>
-                    </div>
-                  </div>
-      </div>
-     
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Se puede usar la tarjeta bip! en la Región Metropolitana Rural?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    No. La Tarjeta bip! sólo puedes usarla en buses de Transantiago y Metro de Santiago.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Si me equivoco de bus y paso la tarjeta, ¿me devuelven la carga?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    No, el pasaje se cobra automáticamente sin devolución.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button class="btn btn-light" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseFour">
+                        ¿Qué cuidados requiere la tarjeta para mantenerla en buenas condiciones?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    Los cuidados de tu tarjeta son simples. Sólo debes evitar exponerla al calor, doblarla o quebrarla. Te recomendamos tenerla
+                    en un tarjetero plástico para aumentar su vida útil.
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<!--Jquery Bootstrap-->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<!--Bootstrap-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-    <script src="js/main.js"></script>
-</body>
-</html>
+
