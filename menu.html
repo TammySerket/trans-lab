@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <title>Menu</title>
+</head>
+<body>
+
+        <ul id="slide-out" class="sidenav">
+          <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
+          <li><a href="#!"><i class="material-icons">exposure</i>Calcular Tarifa</a></li>
+          <li><a href=""><i class="material-icons">account_box</i>Perfil</a></li>
+          <li><a href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
+          <li><a href="#!"><i class="material-icons">forward</i>Home</a></li>
+        </ul>
+        <a href="#" data-activates="mobile-demo" class="btn button-collapse"><i class="material-icons">menu</i></a>
+
+       
+
+
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
+        authDomain: "trans-lab-8e2f2.firebaseapp.com",
+        databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
+        projectId: "trans-lab-8e2f2",
+        storageBucket: "trans-lab-8e2f2.appspot.com",
+        messagingSenderId: "566803243327"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript">$(function(){
+      $('button-collapse').sidenav();
+    });</script>
+    
+    </html>

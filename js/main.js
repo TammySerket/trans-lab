@@ -1,3 +1,13 @@
+//FUNCIÓN PARA SIDEBAR DE MATERIALIZE
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+//FUNCIÓN PARA SIDEBAR DE MATERIALIZE
 
 //con esto tomo el numero de codigo que ingrese el usuario
 
@@ -44,6 +54,4 @@ function saveData() {
     }
 }
 
-$('#textarea1').val('New Text');
-  M.textareaAutoResize($('#textarea1'));
 

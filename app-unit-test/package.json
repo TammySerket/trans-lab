@@ -1,0 +1,32 @@
+{
+  "name": "trans-lab",
+  "version": "1.0.0",
+  "description": "Carpeta Tests tdd",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs",
+    "test": "node app.js"
+
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TammySerket/trans-lab.git"
+  },
+  "keywords": [
+    "test",
+    "development"
+  ],
+  "author": "Tamara Hinojosa Salinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TammySerket/trans-lab/issues"
+  },
+  "homepage": "https://github.com/TammySerket/trans-lab#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
