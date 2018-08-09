@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,24 +15,45 @@
 </head>
 <body>
 
-        <ul id="slide-out" class="sidenav">
-          <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
+      <nav>
+        <div class="nav-wrapper" style="background-color:#212529">
+          <a href="#!" class="brand-logo">TRANS-LAB</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+         <!-- <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
           <li><a href="#!"><i class="material-icons">exposure</i>Calcular Tarifa</a></li>
           <li><a href=""><i class="material-icons">account_box</i>Perfil</a></li>
           <li><a href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
-          <li><a href="#!"><i class="material-icons">forward</i>Home</a></li>
-        </ul>
-        <a href="#" data-activates="mobile-demo" class="btn button-collapse"><i class="material-icons">menu</i></a>
-
-       
-
-
-    <!--Scripts-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="./js/main.js"></script>
+          <li><a href="#!"><i class="material-icons">forward</i>Home</a></li> -->
+          </ul>
+        </div>
+      </nav>
     
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
+        <li><a href="#!"><i class="material-icons">exposure</i>Calcular Tarifa</a></li>
+        <li><a href=""><i class="material-icons">account_box</i>Perfil</a></li>
+        <li><a href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
+        <li><a href="#!"><i class="material-icons">forward</i>Home</a></li>
+      </ul>
+       
+      <!-- Botones-->
+      <div class="container center" id="botones">
+        <br>
+        <div class="row"><a class="waves-effect yellow darken-3 btn">Ver Saldo</a></div>
+        <div class="row"><a class="waves-effect yellow darken-3 btn">Calcular Tarifa</a></div>  
+        <div class="row"><a class="waves-effect yellow darken-3 btn">Perfil</a></div>
+        <div class="row"><a class="waves-effect yellow darken-3 btn">Preguntas Frecuentes</a></div>  
+        
+      </div>
+
+
+   <!--Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="./js/main.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
       // Initialize Firebase
       var config = {
@@ -44,8 +66,9 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script type="text/javascript">$(function(){
-      $('button-collapse').sidenav();
-    });</script>
+    <script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+      M.AutoInit();
+    });
+          </script>
     
     </html>

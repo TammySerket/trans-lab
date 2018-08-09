@@ -1,4 +1,4 @@
-//FUNCIÓN PARA SIDEBAR DE MATERIALIZE
+/*//FUNCIÓN PARA SIDEBAR DE MATERIALIZE
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, options);
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   $(document).ready(function(){
     $('.sidenav').sidenav();
   });
-//FUNCIÓN PARA SIDEBAR DE MATERIALIZE
+//FUNCIÓN PARA SIDEBAR DE MATERIALIZE*/
 
 //con esto tomo el numero de codigo que ingrese el usuario
 

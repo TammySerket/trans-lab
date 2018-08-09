@@ -1,5 +1,5 @@
 body {
-    background-color: #212529;
+    background-color: grey;
 }
 
 h5{
@@ -31,4 +31,8 @@ img{
 form{
     background-color: aliceblue;
 
+}
+#botones{
+    top: 30px;
+    color: #F5AC36;
 }
