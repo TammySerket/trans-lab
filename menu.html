@@ -1,74 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <title>Menu</title>
 </head>
+
 <body>
 
-      <nav>
-        <div class="nav-wrapper" style="background-color:#212529">
-          <a href="#!" class="brand-logo">TRANS-LAB</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-         <!-- <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
+  <nav>
+    <div class="nav-wrapper" style="background-color:#212529">
+      <a href="#!" class="brand-logo">TRANS-LAB</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <!-- <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
           <li><a href="#!"><i class="material-icons">exposure</i>Calcular Tarifa</a></li>
           <li><a href=""><i class="material-icons">account_box</i>Perfil</a></li>
           <li><a href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
           <li><a href="#!"><i class="material-icons">forward</i>Home</a></li> -->
-          </ul>
-        </div>
-      </nav>
-    
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
-        <li><a href="#!"><i class="material-icons">exposure</i>Calcular Tarifa</a></li>
-        <li><a href=""><i class="material-icons">account_box</i>Perfil</a></li>
-        <li><a href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
-        <li><a href="#!"><i class="material-icons">forward</i>Home</a></li>
       </ul>
-       
-      <!-- Botones-->
-      <div class="container center" id="botones">
-        <br>
-        <div class="row"><a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Ver Saldo</a></div>
-        <div class="row"><a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Calcular Tarifa</a></div>  
-        <div class="row"><a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Perfil</a></div>
-        <div class="row"><a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Preguntas Frecuentes</a></div>  
-        
-      </div>
+    </div>
+  </nav>
 
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <a href="#!">
+        <i class="material-icons">attach_money</i>Consulta de Saldo</a>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="material-icons">exposure</i>Calcular Tarifa</a>
+    </li>
+    <li>
+      <a href="">
+        <i class="material-icons">account_box</i>Perfil</a>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="material-icons">question_answer</i>Preguntas Frecuentes</a>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="material-icons">forward</i>Home</a>
+    </li>
+  </ul>
 
-   <!--Scripts-->
+  <!-- Botones-->
+  <div class="container center" id="botones">
+    <br>
+    <div class="row">
+      <a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Ver Saldo</a>
+    </div>
+    <div class="row">
+      <a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Calcular Tarifa</a>
+    </div>
+    <div class="row">
+      <a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Perfil</a>
+    </div>
+    <div class="row">
+      <a class="dropdown-trigger waves-effect yellow darken-3 btn" style="width: 70%; height: 20%" data-target='dropdown1'>Preguntas Frecuentes</a>
+    </div>
+  </div>
+
+  <!-- Preguntas frecuentes-->
+  <div class="container">
+    <ul id='dropdown1' class='dropdown-content'>
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header">¿Dónde puedo cambiar mi tarjeta bip! portador en caso de falla?</div>
+          <div class="collapsible-body">
+            <span> Si tu tarjeta no funciona y tiene daños no atribuibles al usuario, llévala a una Oficina de Servicio al Cliente
+              donde será cambiada por una nueva, sólo si se comprueba la falla. Si la tarjeta dañada tiene saldo, será traspasado
+              en cinco días hábiles.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">¿Cómo puedo saber el saldo de mi tarjeta sin pagar un viaje?</div>
+          <div class="collapsible-body">
+            <span>Hay dos formas en caso de no utilizar esta aplicación: ingresando tu tarjeta en un Infobip! o solicitando de
+              forma impresa la información en un Centro bip!</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">¿Se puede usar la tarjeta bip! en la Región Metropolitana Rural?</div>
+          <div class="collapsible-body">
+            <span>No. La Tarjeta bip! sólo puedes usarla en buses de Transantiago y Metro de Santiago.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Si me equivoco de bus y paso la tarjeta, ¿me devuelven la carga?</div>
+          <div class="collapsible-body">
+            <span>No, el pasaje se cobra automáticamente sin devolución.</span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">¿Qué cuidados requiere la tarjeta para mantenerla en buenas condiciones?</div>
+          <div class="collapsible-body">
+            <span>Los cuidados de tu tarjeta son simples. Sólo debes evitar exponerla al calor, doblarla o quebrarla. Te recomendamos
+              tenerla en un tarjetero plástico para aumentar su vida útil.</span>
+          </div>
+        </li>
+      </ul>
+    </ul>
+  </div>
+
+</body>
+
+<!--Scripts-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="./js/main.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
-        authDomain: "trans-lab-8e2f2.firebaseapp.com",
-        databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
-        projectId: "trans-lab-8e2f2",
-        storageBucket: "trans-lab-8e2f2.appspot.com",
-        messagingSenderId: "566803243327"
-      };
-      firebase.initializeApp(config);
-    </script>
-    <script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-      M.AutoInit();
-    });
-          </script>
-    
-    </html>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
+    authDomain: "trans-lab-8e2f2.firebaseapp.com",
+    databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
+    projectId: "trans-lab-8e2f2",
+    storageBucket: "trans-lab-8e2f2.appspot.com",
+    messagingSenderId: "566803243327"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript">document.addEventListener('DOMContentLoaded', function () {
+    M.AutoInit();
+  });
+</script>
+
+</html>
