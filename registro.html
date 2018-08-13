@@ -16,9 +16,38 @@
     <title>Registro</title>
 </head>
 
+<header class="container center" id="titulo">
+    <div class="row">
+        <div class="input-field col s12">
+            <h3><strong>REGISTRATE</strong></h3>
+        </div>
+    </div>   
+</header>
+
 <body>
 
-    
+        <div class="content">
+            <form id="registro" class="row" style="width : 70%; height: 70%;">
+                        <div class="input-field row">
+                                <i class="material-icons prefix">account_circle</i>
+                            <input id="nameLastname" type="text" class="validate">
+                            <label for="icon_prefix" style="color: black">Nombre y Apellido</label>
+                          </div>
+                    <div class="input-field row">
+                            <i class="material-icons prefix">mail</i>
+                        <input id="correo" type="email" class="validate">
+                        <label for="icon_prefix" style="color: black">Email</label>
+                      </div>
+                      <div class="input-field row">
+                            <i class="material-icons prefix">security</i>
+                        <input id="contrasena" type="password" class="validate">
+                        <label for="icon_prefix" style="color: black">Password</label>
+                      </div>
+                <button class="waves-effect yellow darken-3 btn" type="submit" name="action" style="color: black">Enviar Registro
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
 
 </body>
 
