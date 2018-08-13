@@ -1,13 +1,9 @@
-db = firebase.firestore();
+/* db = firebase.firestore();
 const registro = document.getElementById('registro');
 
-formulario.addEventListener('submit', e =>  {
+registro.addEventListener('submit', e =>  {
     e.preventDefault();
-    const nombreApellido = document.getElementById('nameLastname').value;
-    const correo = document.getElementById('email').value;
-    const contraseña = document.getElementById('contrasena').value;
-    if(nombreApellido.length != 0 && cedula.length != 0 && telefono.length != 0
-    && patente.length != 0 && correo.length != 0 && contraseña.length != 0) {
+    if(nombreApellido.length != 0 && correo.length != 0 && contraseña.length != 0) {
         console.log('if')
         firebase.auth().createUserWithEmailAndPassword(correo, contrasena)
         .then(Response => {
@@ -15,11 +11,42 @@ formulario.addEventListener('submit', e =>  {
             firebase.database().ref('users/' + userId).set( {
                Nombre: nombreApellido,
                Correo: correo, 
-               Contraseña: contraseña 
+               Password: password 
             })
             console.log('ya envie los datos');
             
         })
-       // location.href = '../login/login.html';
+       // location.href = "../menu.html";
     }
-});
+}); */
+
+/*function registrar(){
+    const nombreApellido = document.getElementById('nameLastname').value;
+    const correo = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    firebase.auth().createUserWithEmailAndPassword(correo, password, nombreApellido)
+    .catch(function(error) {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+    });
+}*/
+
+//Registro
+function registerWithFirebase(){
+    const nombreApellido = document.getElementById('nameLastname').value;
+    const correo = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+
+    firebase.auth().createUserWithEmailAndPassword(correo, password)
+        .then(()=>{
+            console.log("Usuario creado con éxito");
+        })
+        .catch((error)=>{
+            console.log("Error de firebase > Código > "+error.code); //error.code nos mostrará el código de error para informarnos qué pasó
+            console.log("Error de firebase > Mensaje > "+error.message); //error.message nos mostrará el mensaje de firebase del mismo error
+        });
+}
