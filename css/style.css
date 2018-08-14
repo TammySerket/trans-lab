@@ -10,6 +10,10 @@ h5{
     margin-right : auto;
 }
 
+#logo{
+    margin-top: 15%;
+}
+
 .container {
     display: block;
     color: #F5AC36;
@@ -35,3 +39,4 @@ section{
     top: 30px;
     color: #F5AC36;
 }
+

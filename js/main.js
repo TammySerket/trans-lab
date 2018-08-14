@@ -26,12 +26,12 @@ let input = document.querySelector('input');
             .then(data => {
               
                 console.log(data) 
-            })   
-        }    
-    })               
+            });   
+        };    
+    });               
         
-     /*const numberBip = getBip.toString(input);
-     console.log((numberBip).value);*/    
+     const numberBip = getBip.toString(input);
+     console.log((numberBip).value);    
 
 function saveData() {
     if((document.getElementById("login-username").value === "") || (document.getElementById("login-password").value === "")){
