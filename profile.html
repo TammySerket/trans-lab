@@ -12,9 +12,67 @@
 
 <body>
 
-    <div>
-        <input type="text">
-    </div>
+        <nav>
+                <div class="nav-wrapper" style="background-color:#212529">
+                  <a href="#!" class="brand-logo">TRANS-LAB</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                  </a>
+                  <ul class="right hide-on-med-and-down">
+                    <!-- <li><a href="#!"><i class="material-icons">attach_money</i>Consulta de Saldo</a></li>
+                      <li><a href="#!"><i class="material-icons">exposure</i>Calcular Tarifa</a></li>
+                      <li><a href=""><i class="material-icons">account_box</i>Perfil</a></li>
+                      <li><a href="#!"><i class="material-icons">question_answer</i>Preguntas Frecuentes</a></li>
+                      <li><a href="#!"><i class="material-icons">forward</i>Home</a></li> -->
+                  </ul>
+                </div>
+              </nav>
+            
+              <ul class="sidenav" id="mobile-demo">
+                <li>
+                  <a href="profile.html">
+                    <i class="material-icons">attach_money</i>Consulta de Saldo</a>
+                </li>
+                <li>
+                  <a href="profile.html">
+                    <i class="material-icons">exposure</i>Calcular Tarifa</a>
+                </li>
+                <li>
+                  <a href="profile.html">
+                    <i class="material-icons">account_box</i>Perfil</a>
+                </li>
+                <li>
+                  <a class="dropdown-trigger" href="#!" id="btnQuestion2" data-target='questions'>
+                    <i class="material-icons">question_answer</i>Preguntas Frecuentes</a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <i class="material-icons">forward</i>Home</a>
+                </li>
+              </ul>
+
+              <div class="container">
+                    <div id="logo" class="row" style="width: 50%; height: 50%s">
+                      <img class="materialboxed" width="650" src="docs/P2210695.JPG">
+                      <p>Lucifer Estrella de la Mañana</p>
+                    </div>
+            
+              <!-- Botones-->
+              <section>
+                    <div>
+                            <i class="material-icons prefix">credit_card</i>
+                            <input id="consultaSaldo" type="text" class="validate">
+                            <label for="icon_prefix" style="color: black">Introduce el numero de tarjeta</label>
+                    </div>
+                </section>
+
+
+              <div class="container center" id="botones">
+                <br>
+                <div class="row">
+                  <a id="tarjeta" href="vervalores.html" class="dropdown-trigger waves-effect yellow darken-3 btn" data-target='questions' style="width: 70%; height: 20%">Tarjeta N°</a>
+                </div>
+              </div>
  
     
     <!--Scripts-->

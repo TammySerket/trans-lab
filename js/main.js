@@ -1,4 +1,4 @@
-document.getElementById('questions').style.visibility = 'hidden'; // Se oculatn preguntas frecuentes hasta que se haga click en boton correspondiente.
+/*document.getElementById('questions').style.visibility = 'hidden'; // Se oculatn preguntas frecuentes hasta que se haga click en boton correspondiente.
 
 function showQuestions() {
     let btnQuestion = document.getElementById("btnQuestion");
@@ -8,7 +8,7 @@ function showQuestions() {
     }else if(btnQuestion2.addEventListener("click")){
         document.getElementById('questions').style.visibility = 'visible'
     }; 
-    }
+    }*/
 
 //con esto tomo el numero de codigo que ingrese el usuario
 
