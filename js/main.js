@@ -1,13 +1,14 @@
-/*//FUNCIÓN PARA SIDEBAR DE MATERIALIZE
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+document.getElementById('questions').style.visibility = 'hidden'; // Se oculatn preguntas frecuentes hasta que se haga click en boton correspondiente.
 
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
-//FUNCIÓN PARA SIDEBAR DE MATERIALIZE*/
+function showQuestions() {
+    let btnQuestion = document.getElementById("btnQuestion");
+    let btnQuestion2 = document.getElementById("btnQuestion2");
+    if(btnQuestion.addEventListener("click")){
+        document.getElementById('questions').style.visibility = 'visible'
+    }else if(btnQuestion2.addEventListener("click")){
+        document.getElementById('questions').style.visibility = 'visible'
+    }; 
+    }
 
 //con esto tomo el numero de codigo que ingrese el usuario
 

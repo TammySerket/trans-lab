@@ -42,7 +42,7 @@
         <i class="material-icons">account_box</i>Perfil</a>
     </li>
     <li>
-      <a href="#!">
+      <a href="#!" id="btnQuestion2" onclick="showQuestions()">
         <i class="material-icons">question_answer</i>Preguntas Frecuentes</a>
     </li>
     <li>
@@ -64,13 +64,13 @@
       <a class="waves-effect yellow darken-3 btn" style="width: 70%; height: 20%">Perfil</a>
     </div>
     <div class="row">
-      <a class="dropdown-trigger waves-effect yellow darken-3 btn" style="width: 70%; height: 20%" data-target='dropdown1'>Preguntas Frecuentes</a>
+      <a id="btnQuestion" class="waves-effect yellow darken-3 btn" onclick="showQuestions()" style="width: 70%; height: 20%">Preguntas Frecuentes</a>
     </div>
   </div>
 
   <!-- Preguntas frecuentes-->
   <div class="container">
-    <ul id='dropdown1' class='dropdown-content'>
+    <ul id='questions' class='dropdown-content'>
       <ul class="collapsible">
         <li>
           <div class="collapsible-header">¿Dónde puedo cambiar mi tarjeta bip! portador en caso de falla?</div>
