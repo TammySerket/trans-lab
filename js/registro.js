@@ -1,41 +1,19 @@
-/* db = firebase.firestore();
-const registro = document.getElementById('registro');
-
-registro.addEventListener('submit', e =>  {
-    e.preventDefault();
-    if(nombreApellido.length != 0 && correo.length != 0 && contraseña.length != 0) {
-        console.log('if')
-        firebase.auth().createUserWithEmailAndPassword(correo, contrasena)
-        .then(Response => {
-            const userId = Response.user.uid;
-            firebase.database().ref('users/' + userId).set( {
-               Nombre: nombreApellido,
-               Correo: correo, 
-               Password: password 
-            })
-            console.log('ya envie los datos');
-            
-        })
-       // location.href = "../menu.html";
-    }
-}); */
-
-/*function registrar(){
+/* function registrar(){
     const nombreApellido = document.getElementById('nameLastname').value;
     const correo = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    firebase.auth().createUserWithEmailAndPassword(correo, password, nombreApellido)
+    firebase.auth().createUserWithEmailAndPassword(correo, password)
     .catch(function(error) {
         let errorCode = error.code;
         let errorMessage = error.message;
         console.log(errorCode);
         console.log(errorMessage);
     });
-}*/
+} */
 
 //Registro
-function registerWithFirebase(){
+function registerWithFirebase() {
     //const nombreApellido = document.getElementById('nameLastname').value;
     const correo = document.getElementById('email').value;
     const password = document.getElementById('password').value;
