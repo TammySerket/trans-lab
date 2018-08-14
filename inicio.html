@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<title>TRANS-LAB</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Inicio</title>
 </head>
 
 <body>
@@ -23,48 +19,45 @@
     </div>
     <!-- Login-->
     <div class="content">
-      <form class="row">
+      <section class="row">
         <div class="input-field row">
           <i class="material-icons prefix">mail</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix" style="color: black">Email</label>
+          <input id="email" type="text" class="validate">
+          <label for="email" style="color: black">Email</label>
         </div>
         <div class="input-field row">
           <i class="material-icons prefix">security</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone" style="color: black">Contraseña</label>
+          <input id="password" type="password" class="validate">
+          <label for="password" style="color: black">Contraseña</label>
         </div>
-      </form>
-      <a href="" style="color: aliceblue">¿Olvidaste tú contraseña?</a>
+        <button class="waves-effect yellow darken-3 btn" onclick="loginWithFirebase()" type="submit" name="action" style="color: black"><a href="menu.html">Logeate</a>
+          <i class="material-icons right">send</i>
+      </button>
+      </section>
+      <a style="color: aliceblue">¿Olvidaste tú contraseña?</a>
       <p> ¿NO TIENES CUENTA?
         <a href="./registro.html" style="color: aliceblue">REGÍSTRATE</a>
       </p>
     </div>
   </div>
 
-</body>
-
-<!--Scripts-->
+ <!--Scripts-->
+ <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+ <script>
+     // Initialize Firebase
+     var config = {
+         apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
+         authDomain: "trans-lab-8e2f2.firebaseapp.com",
+         databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
+         projectId: "trans-lab-8e2f2",
+         storageBucket: "trans-lab-8e2f2.appspot.com",
+         messagingSenderId: "566803243327"
+     };
+     firebase.initializeApp(config);
+ </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script src="./js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+<script src="./js/registro.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
-    authDomain: "trans-lab-8e2f2.firebaseapp.com",
-    databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
-    projectId: "trans-lab-8e2f2",
-    storageBucket: "trans-lab-8e2f2.appspot.com",
-    messagingSenderId: "566803243327"
-  };
-  firebase.initializeApp(config);
-</script>
-<script type="text/javascript">document.addEventListener('DOMContentLoaded', function () {
-    M.AutoInit();
-  });
-</script>
-
+</body>
 </html>

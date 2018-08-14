@@ -24,26 +24,27 @@
             <section id="registro" class="row" style="width : 70%; height: 70%;">
                         <div class="input-field row">
                                 <i class="material-icons prefix">account_circle</i>
-                            <input id="nameLastname" type="text" class="validate" autocomplete="off">
+                            <input id="nameLastname" type="text" class="validate">
                             <label for="icon_prefix" style="color: black">Nombre y Apellido</label>
                           </div>
                     <div class="input-field row">
                             <i class="material-icons prefix">mail</i>
-                        <input id="email" type="email" class="validate" autocomplete="off">
+                        <input id="email" type="email" class="validate">
                         <label for="icon_prefix" style="color: black">Email</label>
                       </div>
                       <div class="input-field row">
                             <i class="material-icons prefix">security</i>
-                        <input id="password" type="password" class="validate" autocomplete="off">
+                        <input id="password" type="password" class="validate">
                         <label for="icon_prefix" style="color: black">Password</label>
                       </div>
-                <button class="waves-effect yellow darken-3 btn" onclick="registerWithFirebase()" type="submit" name="action" style="color: black">Enviar Registro
+                <button class="waves-effect yellow darken-3 btn" onclick="registerWithFirebase()" type="submit" name="action" style="color: black"><a href="menu.html"> Enviar Registro</a>
                     <i class="material-icons right">send</i>
                 </button>
             </section>
             <a class="center" href="../inicio.html" style="color: aliceblue">¿Ya tienes cuenta?</a>
         </div>
 
+ <!--Scripts-->
         <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
         <script>
             // Initialize Firebase
@@ -57,7 +58,6 @@
             };
             firebase.initializeApp(config);
         </script>
-        <!--Scripts-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
 <script src="./js/registro.js"></script>
