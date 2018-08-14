@@ -36,7 +36,7 @@ registro.addEventListener('submit', e =>  {
 
 //Registro
 function registerWithFirebase(){
-    const nombreApellido = document.getElementById('nameLastname').value;
+    //const nombreApellido = document.getElementById('nameLastname').value;
     const correo = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
