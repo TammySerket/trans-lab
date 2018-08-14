@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-<!--         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
- -->        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <title>Registro</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Registro</title>
 </head>
-
-<header class="container center" id="titulo">
-    <div class="row">
-        <div class="input-field col s12">
-            <h3><strong>REGISTRATE</strong></h3>
-        </div>
-    </div>   
-</header>
 
 <body>
 
+    <header class="container center" id="titulo">
+        <div class="row">
+            <div class="input-field col s12">
+                <h3><strong>REGISTRATE</strong></h3>
+            </div>
+        </div>   
+    </header>
+
         <div class="content">
-            <form id="registro" class="row" style="width : 70%; height: 70%;">
+            <section id="registro" class="row" style="width : 70%; height: 70%;">
                         <div class="input-field row">
                                 <i class="material-icons prefix">account_circle</i>
                             <input id="nameLastname" type="text" class="validate" autocomplete="off">
@@ -46,33 +40,27 @@
                 <button class="waves-effect yellow darken-3 btn" onclick="registerWithFirebase()" type="submit" name="action" style="color: black">Enviar Registro
                     <i class="material-icons right">send</i>
                 </button>
-            </form>
+            </section>
             <a class="center" href="../inicio.html" style="color: aliceblue">¿Ya tienes cuenta?</a>
         </div>
 
-</body>
-
-<!--Scripts-->
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
+                authDomain: "trans-lab-8e2f2.firebaseapp.com",
+                databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
+                projectId: "trans-lab-8e2f2",
+                storageBucket: "trans-lab-8e2f2.appspot.com",
+                messagingSenderId: "566803243327"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <!--Scripts-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-<!-- <script type="text/javascript" src="js/materialize.min.js"></script>
- --><script src="./js/registro.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+<script src="./js/registro.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyCdmGWoBR5BKAbE1_YtzL3VHwe7FBqZpwc",
-        authDomain: "trans-lab-8e2f2.firebaseapp.com",
-        databaseURL: "https://trans-lab-8e2f2.firebaseio.com",
-        projectId: "trans-lab-8e2f2",
-        storageBucket: "trans-lab-8e2f2.appspot.com",
-        messagingSenderId: "566803243327"
-    };
-    firebase.initializeApp(config);
-</script>
-<script type="text/javascript">document.addEventListener('DOMContentLoaded', function () {
-        M.AutoInit();
-    });
-</script>
-
+</body>
 </html>

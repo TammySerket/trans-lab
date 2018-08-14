@@ -13,13 +13,11 @@
 } */
 
 //Registro
-function registerWithFirebase() {
-    //const nombreApellido = document.getElementById('nameLastname').value;
-    const correo = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+function registerWithFirebase(){
+    const emailValue = email.value;
+    const passwordValue = password.value;
 
-
-    firebase.auth().createUserWithEmailAndPassword(correo, password)
+    firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(()=>{
             console.log("Usuario creado con éxito");
         })
