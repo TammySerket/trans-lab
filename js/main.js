@@ -1,44 +1,44 @@
-/*document.getElementById('questions').style.visibility = 'hidden'; // Se oculatn preguntas frecuentes hasta que se haga click en boton correspondiente.
-
-function showQuestions() {
-    let btnQuestion = document.getElementById("btnQuestion");
-    let btnQuestion2 = document.getElementById("btnQuestion2");
-    if(btnQuestion.addEventListener("click")){
-        document.getElementById('questions').style.visibility = 'visible'
-    }else if(btnQuestion2.addEventListener("click")){
-        document.getElementById('questions').style.visibility = 'visible'
-    }; 
-    }*/
-
 //con esto tomo el numero de codigo que ingrese el usuario
-
-let input = document.querySelector('input');
+let input = document.getElementById('consultaSaldo');
         // 13 is enter
           // code for enter
           input.addEventListener("keypress",(enter)=>{
             let key = enter.which || enter.keyCode;
             if (key === 13) {
             let num = input.value;
-              //  getBip(num => {
+            //  getBip(num => {
 
-          fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${num}`) 
+          fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${num}`) 
             .then(response => response.json())
             .then(data => {
               
                 console.log(data) 
+               // numberBip(data);
             });   
         };    
     });               
         
-     const numberBip = getBip.toString(input);
-     console.log((numberBip).value);    
+    function saveNumCard(bipCard) {
+        //generando elemtos DOM
+        const bipCard = document.createTextNode(numberBip);
+        const bipButton = document.createElement("button");
+        let numberBip = input.value;
+        if(document.getElementById("tarjeta").value === ""){
+            alert("Ingresa el numero de tu tarjeta BIP")
+        }else{
+        bipCard.push(bipButton);
+        };
+        }
 
-function saveData() {
-    if((document.getElementById("login-username").value === "") || (document.getElementById("login-password").value === "")){
+    /* const numberBip = getBip.toString(input);
+     console.log((numberBip).value); */   
+
+/*function saveData() {
+    if((document.getElementById("nameLastname").value === "") || (document.getElementById("login-password").value === "")){
         alert("no puedes dejar campos vacios")    
         }else{
-            let user = document.getElementById("login-username").value;
-            let password = document.getElementById("login-password").value;
+            let user = document.getElementById("nameLastname").value;
+            let password = document.getElementById("password").value;
             localStorage.setItem(user,password);
         }
 
@@ -48,11 +48,10 @@ function saveData() {
         let userPassword = localStorage.getItem(userName);
     }
     if(typeof(Storage) !== "undefined"){
-        document.getElementById("login-username").value = "";
-        document.getElementById("login-password").value = "";
+        document.getElementById("nameLastname").value = "";
+        document.getElementById("password").value = "";
     }else{
         alert("lo sentimos, el web Storage no tiene soporte");
     }
-}
-
+}*/
 
