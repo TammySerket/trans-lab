@@ -1,6 +1,30 @@
+let bip = database.ref("bipNumber");
+let db = firebase.database();
 //con esto tomo el numero de codigo que ingrese el usuario
 let input = document.getElementById('consultaSaldo');
-        // 13 is enter
+const btnTarjeta = document.getElementById("btnConsulta");
+const result = document.getElementById("result");
+const bipJson = "https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=";
+
+fetch(bipJson)
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+    datosTarjeta(data);
+});
+
+const datosTarjeta = data => {
+    btnTarjeta.addEventListener("click", () => {
+        const render = data.forEach(element => {
+            return result.innerHTML += `<p>${element.saldoTarjeta}</p>`;
+        });
+        console.log(render);
+        return render;
+    });
+};
+
+
+ /*       // 13 is enter
           // code for enter
           input.addEventListener("keypress",(enter)=>{
             let key = enter.which || enter.keyCode;
@@ -12,11 +36,12 @@ let input = document.getElementById('consultaSaldo');
             .then(response => response.json())
             .then(data => {
               
-                console.log(data) 
-               // numberBip(data);
+                console.log(data); 
+                ref.push(data);
             });   
-        };    
-    });               
+        }    
+    });     */
+    
         
     function saveNumCard(bipCard) {
         //generando elemtos DOM
@@ -27,11 +52,11 @@ let input = document.getElementById('consultaSaldo');
             alert("Ingresa el numero de tu tarjeta BIP")
         }else{
         bipCard.push(bipButton);
-        };
         }
+    } 
 
-    /* const numberBip = getBip.toString(input);
-     console.log((numberBip).value); */   
+     const numberBip = getBip.toString(input);
+     console.log((numberBip).value);   
 
 /*function saveData() {
     if((document.getElementById("nameLastname").value === "") || (document.getElementById("login-password").value === "")){
