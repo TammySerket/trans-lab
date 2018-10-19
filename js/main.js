@@ -43,9 +43,9 @@ const datosTarjeta = data => {
     });     */
     
         
-    function saveNumCard(bipCard) {
+    function saveNumCard() {
         //generando elemtos DOM
-        const bipCard = document.createTextNode(numberBip);
+        const bipCard = document.createTextNode("numberBip");
         const bipButton = document.createElement("button");
         let numberBip = input.value;
         if(document.getElementById("tarjeta").value === ""){
